@@ -1,0 +1,420 @@
+
+:root {
+    --primary: #E19526;
+    --bg-dark: #1A1A1B;
+    --bg-card: #252526;
+    --text-light: #D6C0B3;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--bg-dark);
+    border: 2px solid var(--primary);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+}
+
+/* Navigation */
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 70px;
+    background: rgba(26, 26, 27, 0.97);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+    gap: 15px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+    font-size: 1.6rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    font-size: 0.8rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 80vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=85');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    color: var(--white);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* General Sections */
+
+section {
+    padding: 85px 10%;
+    scroll-margin-top: 85px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* About */
+
+.about-text {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+    font-size: 1rem;
+}
+
+/* Menu */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.menu-card {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+}
+
+.menu-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.menu-card h3 {
+    color: var(--white);
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+.menu-card p {
+    font-size: 0.9rem;
+}
+
+.price {
+    color: var(--primary);
+    font-weight: 700;
+    float: right;
+}
+
+/* Reviews */
+
+#reviews {
+    background: #111;
+}
+
+.review-box {
+    text-align: center;
+    font-style: italic;
+    max-width: 750px;
+    margin: auto;
+}
+
+.rating {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* Contact */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact-info h3 {
+    color: var(--white);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 330px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Footer */
+
+footer {
+    background: #111;
+    padding: 40px 10%;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.footer-brand {
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 15px 5%;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .contact-container {
+        gap: 25px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    nav {
+        padding: 14px 5%;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
+    nav > .call-btn {
+        order: 3;
+        padding: 8px 13px;
+        font-size: 0.8rem;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 15px 0;
+        order: 4;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 80px 18px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cta-buttons .btn {
+        width: 190px;
+        text-align: center;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .menu-card {
+        padding: 20px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    iframe {
+        height: 280px;
+    }
+
+    footer {
+        padding: 30px 6%;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .price {
+        float: none;
+        display: inline-block;
+        margin-left: 5px;
+    }
+}
